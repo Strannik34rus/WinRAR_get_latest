@@ -12,7 +12,7 @@ soup = BeautifulSoup(html, features="html.parser")
 # get version
 version = soup.find('b').get_text()
 last_updated = soup.find(string=re.compile("updated"))
-print("Release " + version[15:20] + last_updated)
+print("Release " + version.split(‘ ‘)[3] + last_updated)
 get_rar_latest = soup.find(string=re.compile("Russian"))
 download_version = soup.select('a[href$="ru.exe"]')
 print(get_rar_latest[3:10])
