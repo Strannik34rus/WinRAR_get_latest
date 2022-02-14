@@ -19,8 +19,8 @@ print(get_rar_latest[3:10])
 #function get architecture & download link
 def os_arc_download():
     arc_ver = platform.machine()
-    ver64 = download_version[1]
-    ver32 = download_version[0]
+    ver64 = download_version[0]
+    ver32 = download_version[1]
     lnk64=ver64['href']
     lnk32=ver32['href']
     download_lnk_x64 = URL + lnk64
